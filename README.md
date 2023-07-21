@@ -46,7 +46,7 @@ The following example prints the same character over and over again.
 01 0        # Put input letter in variable 0
 101 10      # Decrement variable 1 to -1
 00 0        # Print value of variable 0
-11 110 10  # When variable 2 is zero (always) go back 1 instruction (value of variable 1)
+11 110 10   # When variable 2 is zero (always) go back 1 instruction (value of variable 1)
 ```
 This binary value is 350330 in decimal. Hence an input file with 350330 characters should be created to run this program. This can be automated with the `filefiller` script.
 
