@@ -40,7 +40,7 @@ The input binary string is `10101000000`, which is 1344 in decimal. Hence an inp
 
 ## Example program: Infinite letter
 
-The following example prints all ascii characters, except null.
+The following example prints the same character over and over again.
 ```
 1           # Program start
 01 0        # Put input letter in variable 0
