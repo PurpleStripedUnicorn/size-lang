@@ -257,11 +257,13 @@ public:
                     vars.increment(instr.paramA);
                     break;
                 case INSTR_DEC:
-                    vars.increment(instr.paramB);
+                    vars.decrement(instr.paramA);
                     break;
                 case INSTR_JUMP:
-                    if (!vars.get(instr.paramA))
-                        ptr += vars.get(instr.paramB) - 1;
+                    if (!vars.get(instr.paramA)) {
+                        ptr += vars.get(instr.paramB);
+                        ptr--;
+                    }
                     break;
             }
             ptr++;
@@ -293,6 +295,7 @@ int main(int argc, char *argv[]) {
     char tmp;
     while (file >> tmp)
         sz++;
+    file.close();
     if (sz == 0) {
         std::cerr << "Given file \"" << argv[1] << "\" has no content" <<
         std::endl;
