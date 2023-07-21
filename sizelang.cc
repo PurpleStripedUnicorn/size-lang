@@ -105,22 +105,22 @@ public:
             bool second = cur();
             next();
             if (first) {
-                bool third = cur();
-                next();
-                if (!second && !third) {
-                    // Increment
-                    size_t v = readVar();
-                    instructions.push_back({INSTR_INC, v});
-                } else if (!second && third) {
-                    // Decrement
-                    size_t v = readVar();
-                    instructions.push_back({INSTR_DEC, v});
-                } else if (second && !third) {
+                if (second) {
                     // Jump
                     size_t vA = readVar(), vB = readVar();
                     instructions.push_back({INSTR_JUMP, vA, vB});
                 } else {
-                    throw std::runtime_error("Invalid instruction");
+                    bool third = cur();
+                    next();
+                    if (third) {
+                        // Decrement
+                        size_t v = readVar();
+                        instructions.push_back({INSTR_DEC, v});
+                    } else {
+                        // Increment
+                        size_t v = readVar();
+                        instructions.push_back({INSTR_INC, v});
+                    }
                 }
             } else {
                 if (second) {
