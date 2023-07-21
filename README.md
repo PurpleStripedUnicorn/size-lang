@@ -25,7 +25,7 @@ A full list of instructions can be found below:
 | `01` | Input | Set a variable value given by the user (given as an ascii character). | `01[var]` |
 | `100` | Increment | Increment a variable by 1. | `100[var]` |
 | `101` | Decrement | Decrement a variable by 1. | `101[var]` |
-| `11` | Conditional jump | If the given variable is zero, move to the left (negative) or right (positive) a given amount of instructions, stored in a variable. When jumping to a position outside the program, the program is terminated. | `110[compvar][jumpvar]` |
+| `11` | Conditional jump | If the given variable is zero, move to the left (negative) or right (positive) a given amount of instructions, stored in a variable. When jumping to a position outside the program, the program is terminated. | `11[compvar][jumpvar]` |
 
 ### Example program: Next character
 
