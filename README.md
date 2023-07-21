@@ -27,7 +27,7 @@ A full list of instructions can be found below:
 | `101` | Decrement | Decrement a variable by 1. | `101[var]` |
 | `11` | Conditional jump | If the given variable is zero, move to the left (negative) or right (positive) a given amount of instructions, stored in a variable. When jumping to a position outside the program, the program is terminated. | `11[compvar][jumpvar]` |
 
-### Example program: Next character
+## Example program: Next character
 
 We can ask a user for a character as input and then print the next character in ascii to the console. This is representated with the following binary string:
 ```
@@ -38,7 +38,7 @@ We can ask a user for a character as input and then print the next character in 
 ```
 The input binary string is `10101000000`, which is 1344 in decimal. Hence an input file with 1344 characters should be created to run this program.
 
-### Example program: Infinite letter
+## Example program: Infinite letter
 
 The following example prints all ascii characters, except null.
 ```
@@ -50,10 +50,10 @@ The following example prints all ascii characters, except null.
 ```
 This binary value is 350330 in decimal. Hence an input file with 350330 characters should be created to run this program. This can be automated with the `filefiller` script.
 
-### How to write more complex programs
+## Can I write more complex programs?
 
-To write more complex programs, buy more disk space.
+To write more complex programs, buy more disk space. A lot more :)
 
-### Is this useful?
+## Is this useful?
 
 No.
